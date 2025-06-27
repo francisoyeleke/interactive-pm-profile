@@ -1,19 +1,38 @@
 
 import { useEffect, useRef, useState } from "react";
-import { Target, Users, BarChart3, Lightbulb, Zap, Code, Database, Figma } from "lucide-react";
+import { Target, Users, BarChart3, Lightbulb, Zap, Figma, TrendingUp, Search } from "lucide-react";
 
 export const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedBars, setAnimatedBars] = useState<boolean[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
-  const skills = [
-    { name: "Product Strategy", level: 95, icon: Target },
-    { name: "User Research", level: 90, icon: Users },
-    { name: "Data Analysis", level: 85, icon: BarChart3 },
-    { name: "Stakeholder Management", level: 92, icon: Lightbulb },
-    { name: "Agile/Scrum", level: 88, icon: Zap },
-    { name: "UI/UX Collaboration", level: 85, icon: Figma },
+  const skillCategories = [
+    {
+      title: "Product Strategy",
+      icon: Target,
+      skills: ["Roadmapping", "A/B Testing", "Project Management", "Prioritization"]
+    },
+    {
+      title: "Product Design",
+      icon: Figma,
+      skills: ["User Stories", "User Flows", "Wireframes", "Persona Development"]
+    },
+    {
+      title: "Market & User Research",
+      icon: Search,
+      skills: ["Market Analysis", "Experiment Design", "Usability Testing", "Customer Insights"]
+    },
+    {
+      title: "Analytics & Product Operations",
+      icon: BarChart3,
+      skills: ["Data Analysis", "Experiment Tracking", "Software Development & Management", "Metrics-Driven Decision Making"]
+    },
+    {
+      title: "Collaboration & Teamwork",
+      icon: Users,
+      skills: ["Cross-functional Leadership", "Stakeholder Management", "Effective Communication", "Aligning Teams Around Product Goals"]
+    }
   ];
 
   const tools = [
@@ -27,7 +46,7 @@ export const Skills = () => {
           setIsVisible(true);
           // Animate progress bars with delay
           setTimeout(() => {
-            setAnimatedBars(new Array(skills.length).fill(true));
+            setAnimatedBars(new Array(skillCategories.length).fill(true));
           }, 500);
         }
       },
@@ -39,78 +58,61 @@ export const Skills = () => {
     }
 
     return () => observer.disconnect();
-  }, [skills.length]);
+  }, [skillCategories.length]);
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="skills" ref={sectionRef} className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent">
-            Skills & Expertise
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-black to-yellow-600 bg-clip-text text-transparent">
+            My Skills
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Skills with Progress Bars */}
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Core Competencies</h3>
-            <div className="space-y-6">
-              {skills.map((skill, index) => {
-                const Icon = skill.icon;
-                return (
-                  <div key={skill.name} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-center mb-3">
-                      <Icon className="text-blue-600 mr-3" size={24} />
-                      <span className="font-semibold text-gray-900">{skill.name}</span>
-                      <span className="ml-auto text-blue-600 font-bold">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: animatedBars[index] ? `${skill.level}%` : '0%',
-                        }}
-                      ></div>
-                    </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {skillCategories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <div
+                key={category.title}
+                className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-yellow-100 rounded-lg mr-4">
+                    <Icon className="text-yellow-600" size={24} />
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Tools & Technologies */}
-          <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Tools & Technologies</h3>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="grid grid-cols-2 gap-4">
-                {tools.map((tool, index) => (
-                  <div
-                    key={tool}
-                    className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg text-center hover:from-blue-100 hover:to-purple-100 transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <span className="font-semibold text-gray-700">{tool}</span>
-                  </div>
-                ))}
+                  <h3 className="font-bold text-black text-lg">{category.title}</h3>
+                </div>
+                <ul className="space-y-2">
+                  {category.skills.map((skill) => (
+                    <li key={skill} className="flex items-start text-gray-700">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-sm">{skill}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            );
+          })}
+        </div>
 
-            <div className="mt-8 bg-white p-8 rounded-xl shadow-lg">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Key Achievements</h4>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Led cross-functional teams of 10+ engineers and designers
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Increased user engagement by 150% through strategic feature releases
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Reduced product development cycle time by 40%
-                </li>
-              </ul>
+        {/* Tools & Technologies */}
+        <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          <h3 className="text-2xl font-bold text-black text-center mb-8">Tools & Technologies</h3>
+          <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {tools.map((tool, index) => (
+                <div
+                  key={tool}
+                  className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 p-4 rounded-lg text-center hover:from-yellow-100 hover:to-amber-100 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <span className="font-semibold text-gray-800">{tool}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
