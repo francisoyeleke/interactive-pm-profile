@@ -35,13 +35,13 @@ export const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          ? "bg-black/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold bg-gradient-to-r from-black to-yellow-600 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold bg-gradient-to-r from-white to-yellow-600 bg-clip-text text-transparent">
             PM Portfolio
           </div>
 
@@ -51,7 +51,7 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-800 hover:text-yellow-600 transition-colors duration-300 font-medium"
+                className="text-white hover:text-yellow-600 transition-colors duration-300 font-medium"
               >
                 {item.label}
               </button>
@@ -60,7 +60,7 @@ export const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-800"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -69,12 +69,12 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg rounded-lg mt-2 py-4">
+          <div className="md:hidden bg-black shadow-lg rounded-lg mt-2 py-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-2 text-gray-800 hover:text-yellow-600 hover:bg-yellow-50 transition-colors duration-300"
+                className="block w-full text-left px-4 py-2 text-white hover:text-yellow-600 hover:bg-yellow-50/10 transition-colors duration-300"
               >
                 {item.label}
               </button>

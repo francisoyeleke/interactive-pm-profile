@@ -28,7 +28,7 @@ export const Hero = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="block text-black mb-2">John Smith</span>
+            <span className="block text-white mb-2">Oyeleke Francis</span>
             <span className="bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600 bg-clip-text text-transparent">
               Product Manager
             </span>
@@ -36,7 +36,7 @@ export const Hero = () => {
         </div>
         
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-xl md:text-2xl text-gray-800 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed">
             As a product manager, I serve as the bridge between building the right product and building it exceptionally well, aligning solutions with user needs and business objectives while fostering collaboration across teams to transform ideas into impactful outcomes.
           </p>
         </div>
@@ -55,7 +55,7 @@ export const Hero = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ChevronDown 
           size={32} 
-          className="text-gray-600 cursor-pointer hover:text-yellow-500 transition-colors duration-300"
+          className="text-white cursor-pointer hover:text-yellow-500 transition-colors duration-300"
           onClick={scrollToAbout}
         />
       </div>

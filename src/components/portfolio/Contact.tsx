@@ -59,20 +59,20 @@ export const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "john.smith@email.com",
-      href: "mailto:john.smith@email.com"
+      value: "oyelekefrancis1505@gmail.com",
+      href: "mailto:oyelekefrancis1505@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "09134508965",
+      href: "tel:09134508965"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/johnsmith",
-      href: "https://linkedin.com/in/johnsmith"
+      value: "linkedin.com/in/oyelekefrancis",
+      href: "https://linkedin.com/in/oyelekefrancis"
     }
   ];
 
@@ -229,7 +229,7 @@ export const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-white/20">
           <p className="text-gray-300">
-            © 2024 John Smith - Product Manager. All rights reserved.
+            © 2024 Oyeleke Francis - Product Manager. All rights reserved.
           </p>
         </div>
       </div>

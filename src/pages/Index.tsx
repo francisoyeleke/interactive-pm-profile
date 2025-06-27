@@ -9,7 +9,7 @@ import { Navigation } from "@/components/portfolio/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-yellow-50">
+    <div className="min-h-screen bg-black">
       <Navigation />
       <Hero />
       <About />
