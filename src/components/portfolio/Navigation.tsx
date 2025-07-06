@@ -41,8 +41,10 @@ export const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold bg-gradient-to-r from-white to-yellow-600 bg-clip-text text-transparent">
-            PM Portfolio
+          <div className="text-2xl kaushan-script-regular font-bold bg-gradient-to-r from-white to-yellow-600 bg-clip-text text-transparent">
+            {/* <span className="text-white">Francis</span>
+            <span className="text-yellow-600">.pm</span> */}
+            Francis.PM
           </div>
 
           {/* Desktop Menu */}

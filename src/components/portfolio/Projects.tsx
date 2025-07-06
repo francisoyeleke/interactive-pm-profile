@@ -1,6 +1,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import zoid2 from "@/assets/images/projects/zoid-2.png";
+import mbag from "@/assets/images/projects/mbag.jpeg";
+import crystalveey from "@/assets/images/projects/crystalveey.png";
 
 export const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,9 +13,9 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Mobile App",
+      title: "Crystalveey Merch",
       description: "Complete redesign of mobile shopping experience resulting in 40% increase in conversions",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
+      image: crystalveey,
       challenges: ["Low mobile conversion rates", "Complex checkout process", "Poor user retention"],
       solutions: ["Streamlined checkout flow", "Personalized recommendations", "Progressive web app implementation"],
       outcomes: ["40% increase in conversions", "60% faster checkout", "4.8/5 app store rating"],
@@ -22,9 +25,9 @@ export const Projects = () => {
     },
     {
       id: 2,
-      title: "SaaS Analytics Dashboard",
+      title: "MBAG",
       description: "Built comprehensive analytics platform for small businesses to track key metrics",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      image: mbag,
       challenges: ["Complex data visualization", "Real-time updates", "Multi-tenant architecture"],
       solutions: ["Custom chart library", "WebSocket integration", "Microservices architecture"],
       outcomes: ["500+ active businesses", "$2M ARR in first year", "99.9% uptime"],
@@ -34,9 +37,9 @@ export const Projects = () => {
     },
     {
       id: 3,
-      title: "Healthcare Booking Platform",
+      title: "Zoid",
       description: "Developed patient-doctor appointment scheduling system with telehealth integration",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+      image: zoid2,
       challenges: ["HIPAA compliance", "Complex scheduling logic", "Multiple user types"],
       solutions: ["End-to-end encryption", "Smart scheduling algorithm", "Role-based access control"],
       outcomes: ["10,000+ appointments booked", "95% patient satisfaction", "50% reduction in no-shows"],
