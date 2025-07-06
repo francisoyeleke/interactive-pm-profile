@@ -41,7 +41,7 @@ export const Hero = () => {
               <span className="text-yellow-400 text-sm font-medium">Product Manager</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="block text-white mb-4">Oyeleke</span>
               <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent">
                 Francis
@@ -51,31 +51,13 @@ export const Hero = () => {
         </div>
         
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed font-light">
             As a product manager, I serve as the bridge between building the right product and building it exceptionally well, aligning solutions with user needs and business objectives while fostering collaboration across teams to transform ideas into impactful outcomes.
           </p>
         </div>
 
-        {/* Stats Section */}
-        <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-amber-400 bg-clip-text text-transparent mb-2">5+</div>
-              <div className="text-gray-400 text-sm">Products Launched</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-amber-400 bg-clip-text text-transparent mb-2">$100K+</div>
-              <div className="text-gray-400 text-sm">Revenue Generated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-amber-400 bg-clip-text text-transparent mb-2">3</div>
-              <div className="text-gray-400 text-sm">Years Experience</div>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Buttons */}
-        <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button 
               onClick={scrollToAbout}
