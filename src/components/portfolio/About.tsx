@@ -1,5 +1,6 @@
 
 import { useEffect, useRef, useState } from "react";
+import francisBg from "@/assets/images/white-francis-removebg-preview.png";
 
 export const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,9 +37,9 @@ export const About = () => {
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                  alt="Product Manager Profile"
-                  className="w-full h-full object-cover"
+                  src={francisBg} 
+                  alt="Francis Background"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-yellow-400 to-amber-400 rounded-full opacity-20 animate-pulse"></div>
@@ -62,11 +63,11 @@ export const About = () => {
 
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <div className="text-3xl font-bold text-yellow-600">15+</div>
+                  <div className="text-3xl font-bold text-yellow-600">5+</div>
                   <div className="text-gray-800">Products Launched</div>
                 </div>
                 <div className="text-center p-4 bg-amber-50 border border-amber-200 rounded-lg">
-                  <div className="text-3xl font-bold text-amber-600">$10M+</div>
+                  <div className="text-3xl font-bold text-amber-600">$100K+</div>
                   <div className="text-gray-800">Revenue Generated</div>
                 </div>
               </div>
