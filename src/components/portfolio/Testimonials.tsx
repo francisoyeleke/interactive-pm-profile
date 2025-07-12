@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
@@ -10,28 +9,28 @@ export const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "VP of Engineering",
+      name: "Adewale Azeez",
+      role: "Software Engineer", 
       company: "TechCorp",
-      content: "John's strategic vision and execution capabilities are exceptional. He transformed our product roadmap and delivered results that exceeded all expectations. His ability to balance user needs with business objectives is remarkable.",
+      content: "Francis's strategic vision and execution capabilities are exceptional. He transformed our product roadmap and delivered results that exceeded all expectations. His ability to balance user needs with business objectives is remarkable.",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b6d6b375?w=150&h=150&fit=crop&crop=face",
       rating: 5
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Kolawole Bolaji",
       role: "CEO",
-      company: "StartupXYZ",
-      content: "Working with John was a game-changer for our startup. His data-driven approach and deep understanding of user psychology helped us achieve product-market fit 6 months ahead of schedule.",
+      company: "Intrasoft",
+      content: "Working with Francis was a game-changer for our logistics platform. His PRD for operations and platform building expertise helped us create a delivery system that exceeded our expectations. His understanding of complex operational workflows is outstanding.",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       rating: 5
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      role: "Head of Design",
+      name: "Moses Adebayo",
+      role: "Mobile Developer",
       company: "DesignStudio",
-      content: "John's collaborative approach and respect for design thinking made our partnership incredibly productive. He understands the importance of user experience and fights for quality at every step.",
+      content: "Francis's collaborative approach and respect for design thinking made our partnership incredibly productive. He understands the importance of user experience and fights for quality at every step.",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
       rating: 5
     },
@@ -40,7 +39,7 @@ export const Testimonials = () => {
       name: "David Park",
       role: "CTO",
       company: "InnovateTech",
-      content: "John's technical understanding and ability to communicate complex requirements to development teams is outstanding. He bridges the gap between business and technology seamlessly.",
+      content: "Francis's technical understanding and ability to communicate complex requirements to development teams is outstanding. He bridges the gap between business and technology seamlessly.",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       rating: 5
     }
