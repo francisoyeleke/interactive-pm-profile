@@ -119,7 +119,7 @@ export const Contact = () => {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  5+ years of product management experience
+                  1+ years of product management experience
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>

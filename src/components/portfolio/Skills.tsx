@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Target, Users, BarChart3, Lightbulb, Zap, Figma, TrendingUp, Search } from "lucide-react";
 
@@ -14,7 +13,7 @@ export const Skills = () => {
       skills: ["Roadmapping", "A/B Testing", "Project Management", "Prioritization"]
     },
     {
-      title: "Product Design",
+      title: "User Experience Design & Documentation",
       icon: Figma,
       skills: ["User Stories", "User Flows", "Wireframes", "Persona Development"]
     },
@@ -36,7 +35,7 @@ export const Skills = () => {
   ];
 
   const tools = [
-    "Jira", "Asana", "Figma", "Notion", "Miro", "SQL", "Google Analytics", "Mixpanel"
+    "Jira", "Asana", "Figma", "Notion", "Miro", "Google Analytics", "Google Suites", "Trello", "Mailchimp"
   ];
 
   useEffect(() => {

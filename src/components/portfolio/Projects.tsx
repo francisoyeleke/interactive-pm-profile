@@ -14,7 +14,7 @@ export const Projects = () => {
     {
       id: 1,
       title: "Crystalveey Merch",
-      description: "Complete redesign of mobile shopping experience resulting in 40% increase in conversions",
+      description: "Crystalveey Merch is a portfolio brand that offers varieties of services, we are all about balancing worklife and enjoyment. Our utmost priority is to help busy people have fun and unwind.",
       image: crystalveey,
       challenges: ["Low mobile conversion rates", "Complex checkout process", "Poor user retention"],
       solutions: ["Streamlined checkout flow", "Personalized recommendations", "Progressive web app implementation"],
@@ -25,8 +25,8 @@ export const Projects = () => {
     },
     {
       id: 2,
-      title: "MBAG",
-      description: "Built comprehensive analytics platform for small businesses to track key metrics",
+      title: "MBAG MFBank",
+      description: "MBAG Microfinance Bank offers a fast track to financial independence through a range of services including micro savings, micro loans, and school-targeted loans. With a user-friendly banking app, managing money, making payments, and settling bills becomes effortless.",
       image: mbag,
       challenges: ["Complex data visualization", "Real-time updates", "Multi-tenant architecture"],
       solutions: ["Custom chart library", "WebSocket integration", "Microservices architecture"],
@@ -38,12 +38,36 @@ export const Projects = () => {
     {
       id: 3,
       title: "Zoid",
-      description: "Developed patient-doctor appointment scheduling system with telehealth integration",
+      description: "Zoid is a secure lifestyle management platform that empowers you to seamlessly control your home and community. With features like access management, bill payments, and instant updates, Zoid simplifies everyday living through smart, convenient technology – bringing peace of mind and effortless control to your fingertips.",
       image: zoid2,
       challenges: ["HIPAA compliance", "Complex scheduling logic", "Multiple user types"],
       solutions: ["End-to-end encryption", "Smart scheduling algorithm", "Role-based access control"],
       outcomes: ["10,000+ appointments booked", "95% patient satisfaction", "50% reduction in no-shows"],
       tech: ["Vue.js", "Express.js", "MySQL", "WebRTC"],
+      link: "#",
+      github: "#"
+    },
+    {
+      id: 4,
+      title: "Dietboon",
+      description: "Dietboon makes healthy living easy and affordable for busy individuals. From tailored meal plans and daily health tips to grocery deliveries and nutritious take-out options, we ensure you stay energized and on track with your goals. Enjoy delicious, balanced meals that fit your lifestyle – anytime, anywhere.",
+      image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop",
+      challenges: ["Meal personalization complexity", "Delivery logistics", "Nutritional accuracy"],
+      solutions: ["AI-powered meal recommendations", "Smart delivery routing", "Certified nutritionist partnerships"],
+      outcomes: ["85% user retention rate", "30% improvement in health metrics", "4.7/5 user satisfaction"],
+      tech: ["React", "Python", "TensorFlow", "Google Maps API"],
+      link: "#",
+      github: "#"
+    },
+    {
+      id: 5,
+      title: "Wholesquare",
+      description: "Wholesquare is a social network designed to connect people through shared interests and also allows you to network and meet with your squaremates through community activities & events. Wholesquare is basically a platform that connects people with similar interests.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
+      challenges: ["User engagement", "Event coordination", "Interest matching algorithms"],
+      solutions: ["Smart interest-based matching", "Integrated event planning tools", "Gamified community features"],
+      outcomes: ["50,000+ active users", "75% event attendance rate", "90% positive community feedback"],
+      tech: ["Next.js", "Node.js", "Redis", "Socket.io"],
       link: "#",
       github: "#"
     }
