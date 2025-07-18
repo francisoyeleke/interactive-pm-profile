@@ -19,8 +19,8 @@ export const Projects = () => {
       challenges: ["Low mobile conversion rates", "Complex checkout process", "Poor user retention"],
       solutions: ["Streamlined checkout flow", "Personalized recommendations", "Progressive web app implementation"],
       outcomes: ["40% increase in conversions", "60% faster checkout", "4.8/5 app store rating"],
-      tech: ["React Native", "Node.js", "MongoDB", "Stripe API"],
-      link: "#",
+      tech: ["Next.js", "Node.js", "MongoDB", "Paystack"],
+      link: "https://www.crystalveey.com/",
       github: "#"
     },
     {
@@ -32,7 +32,7 @@ export const Projects = () => {
       solutions: ["Custom chart library", "WebSocket integration", "Microservices architecture"],
       outcomes: ["500+ active businesses", "$2M ARR in first year", "99.9% uptime"],
       tech: ["React", "D3.js", "Python", "PostgreSQL"],
-      link: "#",
+      link: "https://mbagmfbank.com/",
       github: "#"
     },
     {
@@ -56,7 +56,7 @@ export const Projects = () => {
       solutions: ["AI-powered meal recommendations", "Smart delivery routing", "Certified nutritionist partnerships"],
       outcomes: ["85% user retention rate", "30% improvement in health metrics", "4.7/5 user satisfaction"],
       tech: ["React", "Python", "TensorFlow", "Google Maps API"],
-      link: "#",
+      link: "https://www.dietboon.com/",
       github: "#"
     },
     {
@@ -68,7 +68,7 @@ export const Projects = () => {
       solutions: ["Smart interest-based matching", "Integrated event planning tools", "Gamified community features"],
       outcomes: ["50,000+ active users", "75% event attendance rate", "90% positive community feedback"],
       tech: ["Next.js", "Node.js", "Redis", "Socket.io"],
-      link: "#",
+      link: "https://www.wholesquare.org/",
       github: "#"
     }
   ];
@@ -234,13 +234,6 @@ export const Projects = () => {
                       >
                         <ExternalLink size={20} className="mr-2" />
                         View Live
-                      </a>
-                      <a
-                        href={project.github}
-                        className="flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-                      >
-                        <Github size={20} className="mr-2" />
-                        View Code
                       </a>
                     </div>
                   </div>
