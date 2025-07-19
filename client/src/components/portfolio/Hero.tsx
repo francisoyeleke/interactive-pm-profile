@@ -17,32 +17,32 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, var(--deep-violet) 0%, var(--eerie-black) 50%, var(--violet) 100%)' }}>
       {/* Enhanced Background Animation */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-yellow-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-32 right-32 w-80 h-80 bg-amber-300/15 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-pulse" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute bottom-32 left-1/3 w-72 h-72 bg-yellow-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-80 animate-pulse" style={{ animationDelay: "4s" }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-yellow-400/5 to-amber-400/5 rounded-full filter blur-3xl opacity-50"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ backgroundColor: 'var(--bright-lavender)' }}></div>
+        <div className="absolute top-32 right-32 w-80 h-80 rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-pulse" style={{ backgroundColor: 'var(--lavender-indigo)', animationDelay: "2s" }}></div>
+        <div className="absolute bottom-32 left-1/3 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-pulse" style={{ backgroundColor: 'var(--bright-lavender)', animationDelay: "4s" }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full filter blur-3xl opacity-10" style={{ background: 'linear-gradient(to right, var(--lavender-indigo), var(--bright-lavender))' }}></div>
       </div>
 
       {/* Floating Icons */}
       <div className="absolute inset-0 -z-5">
-        <Sparkles className="absolute top-32 left-1/4 text-yellow-400/20 w-6 h-6 animate-pulse" style={{ animationDelay: "1s" }} />
-        <Target className="absolute top-1/3 right-1/4 text-yellow-500/20 w-8 h-8 animate-pulse" style={{ animationDelay: "3s" }} />
-        <Users className="absolute bottom-1/3 left-1/5 text-amber-400/20 w-7 h-7 animate-pulse" style={{ animationDelay: "5s" }} />
+        <Sparkles className="absolute top-32 left-1/4 w-6 h-6 animate-pulse opacity-30" style={{ color: 'var(--bright-lavender)', animationDelay: "1s" }} />
+        <Target className="absolute top-1/3 right-1/4 w-8 h-8 animate-pulse opacity-25" style={{ color: 'var(--lavender-indigo)', animationDelay: "3s" }} />
+        <Users className="absolute bottom-1/3 left-1/5 w-7 h-7 animate-pulse opacity-30" style={{ color: 'var(--bright-lavender)', animationDelay: "5s" }} />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Main Content */}
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-8">
-            <div className="inline-block px-4 py-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full mb-6">
-              <span className="text-yellow-400 text-sm font-medium">Product Manager</span>
+            <div className="inline-block px-6 py-3 rounded-full mb-8 backdrop-blur-sm" style={{ backgroundColor: 'rgba(189, 147, 239, 0.15)', border: '1px solid rgba(189, 147, 239, 0.3)' }}>
+              <span className="text-sm font-medium modern-font" style={{ color: 'var(--bright-lavender)' }}>Product Manager</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent whitespace-nowrap">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight luxury-font">
+              <span className="bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap" style={{ backgroundImage: 'linear-gradient(to right, var(--bright-lavender), var(--magnolia), var(--lavender-indigo))' }}>
                 Oyeleke Francis
               </span>
             </h1>
@@ -50,17 +50,21 @@ export const Hero = () => {
         </div>
         
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl mb-12 max-w-5xl mx-auto leading-relaxed font-light modern-font" style={{ color: 'var(--magnolia)' }}>
             As a product manager, I serve as the bridge between building the right product and building it exceptionally well, aligning solutions with user needs and business objectives while fostering collaboration across teams to transform ideas into impactful outcomes.
           </p>
         </div>
 
         {/* CTA Buttons */}
         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button 
               onClick={scrollToAbout}
-              className="group bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-yellow-400/25"
+              className="group px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl modern-font text-white"
+              style={{ 
+                background: 'linear-gradient(to right, var(--lavender-indigo), var(--bright-lavender))',
+                boxShadow: '0 10px 40px rgba(163, 70, 230, 0.3)'
+              }}
             >
               <span className="flex items-center gap-2">
                 View My Work
@@ -70,7 +74,14 @@ export const Hero = () => {
             
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 border-2 border-yellow-400/30 text-yellow-400 hover:bg-yellow-400/10 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 border-2 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 modern-font backdrop-blur-sm"
+              style={{ 
+                borderColor: 'var(--bright-lavender)', 
+                color: 'var(--bright-lavender)',
+                backgroundColor: 'rgba(189, 147, 239, 0.1)'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(189, 147, 239, 0.2)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(189, 147, 239, 0.1)'}
             >
               Get In Touch
             </button>

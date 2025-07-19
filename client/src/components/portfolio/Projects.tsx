@@ -91,10 +91,10 @@ export const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" ref={sectionRef} className="py-20 bg-white">
+    <section id="projects" ref={sectionRef} className="py-20" style={{ backgroundColor: 'var(--magnolia)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 luxury-font bg-gradient-to-r bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, var(--deep-violet), var(--violet))' }}>
             Featured Projects
           </h2>
         </div>
@@ -103,48 +103,95 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:scale-105 ${
+              className={`group relative overflow-hidden cursor-pointer transition-all duration-700 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
               }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              style={{ 
+                transitionDelay: `${index * 200}ms`,
+                background: 'linear-gradient(145deg, #ffffff, #f8f6ff)',
+                borderRadius: '24px',
+                boxShadow: '0 8px 32px rgba(83, 26, 153, 0.1)',
+                border: '1px solid rgba(163, 70, 230, 0.08)'
+              }}
               onClick={() => setSelectedProject(project.id)}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 20px 60px rgba(83, 26, 153, 0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(83, 26, 153, 0.1)';
+              }}
             >
-              <div className="relative overflow-hidden">
+              {/* Minimal Image Container */}
+              <div className="relative overflow-hidden" style={{ borderRadius: '20px 20px 0 0', height: '200px' }}>
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a href={project.link} className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors">
-                    <ExternalLink size={16} className="text-white" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Elegant Action Buttons */}
+                <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                  <a 
+                    href={project.link} 
+                    className="p-3 backdrop-blur-md rounded-full transition-all duration-300 hover:scale-110"
+                    style={{ 
+                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(189, 147, 239, 0.9)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'}
+                  >
+                    <ExternalLink size={16} style={{ color: 'var(--deep-violet)' }} />
                   </a>
-                  <a href={project.github} className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors">
-                    <Github size={16} className="text-white" />
+                  <a 
+                    href={project.github} 
+                    className="p-3 backdrop-blur-md rounded-full transition-all duration-300 hover:scale-110"
+                    style={{ 
+                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(189, 147, 239, 0.9)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'}
+                  >
+                    <Github size={16} style={{ color: 'var(--deep-violet)' }} />
                   </a>
                 </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+              {/* Minimalist Content Section */}
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-semibold luxury-font transition-colors duration-300" style={{ color: 'var(--deep-violet)' }}>
+                    {project.title}
+                  </h3>
+                  <div className="w-6 h-6 rounded-full transition-all duration-300" style={{ backgroundColor: 'var(--bright-lavender)', opacity: '0.3' }}></div>
+                </div>
+                
+                <p className="text-sm leading-relaxed mb-6 modern-font line-clamp-2" style={{ color: 'var(--violet)', opacity: '0.8' }}>
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.slice(0, 3).map((tech) => (
+                
+                {/* Minimal Tech Tags */}
+                <div className="flex items-center space-x-2">
+                  {project.tech.slice(0, 2).map((tech, i) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
+                      className="px-3 py-1 text-xs font-medium rounded-full modern-font transition-all duration-300"
+                      style={{ 
+                        backgroundColor: 'rgba(189, 147, 239, 0.1)', 
+                        color: 'var(--violet)',
+                        border: '1px solid rgba(189, 147, 239, 0.2)'
+                      }}
                     >
                       {tech}
                     </span>
                   ))}
-                  {project.tech.length > 3 && (
-                    <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
-                      +{project.tech.length - 3} more
+                  {project.tech.length > 2 && (
+                    <span className="text-xs font-medium modern-font" style={{ color: 'var(--bright-lavender)', opacity: '0.7' }}>
+                      +{project.tech.length - 2}
                     </span>
                   )}
                 </div>
@@ -153,18 +200,27 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* Project Modal */}
+        {/* Elegant Project Modal */}
         {selectedProject && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="fixed inset-0 backdrop-blur-md z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(50, 9, 100, 0.4)' }}>
+            <div className="max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl" style={{ background: 'linear-gradient(145deg, #ffffff, #f8f6ff)', border: '1px solid rgba(163, 70, 230, 0.1)' }}>
               <div className="p-8">
                 {projects.filter(p => p.id === selectedProject).map(project => (
                   <div key={project.id}>
                     <div className="flex justify-between items-start mb-6">
-                      <h3 className="text-3xl font-bold text-gray-900">{project.title}</h3>
+                      <h3 className="text-3xl font-bold luxury-font" style={{ color: 'var(--deep-violet)' }}>{project.title}</h3>
                       <button
                         onClick={() => setSelectedProject(null)}
-                        className="text-gray-400 hover:text-gray-600 text-2xl"
+                        className="text-2xl transition-colors duration-300 p-2 rounded-full"
+                        style={{ color: 'var(--violet)' }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = 'rgba(189, 147, 239, 0.1)';
+                          e.currentTarget.style.color = 'var(--deep-violet)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = 'transparent';
+                          e.currentTarget.style.color = 'var(--violet)';
+                        }}
                       >
                         ×
                       </button>

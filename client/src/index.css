@@ -4,10 +4,22 @@
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
-.kaushan-script-regular {
-  font-family: "Kaushan Script", cursive;
-  font-weight: 700;
-  font-style: normal;
+.luxury-font {
+  font-family: "Playfair Display", serif;
+}
+
+.modern-font {
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom color palette variables */
+:root {
+  --bright-lavender: #BD93EF;
+  --lavender-indigo: #A346E6;
+  --magnolia: #F3E9FF;
+  --violet: #531A99;
+  --deep-violet: #320964;
+  --eerie-black: #1F1F1F;
 }
 
 @layer base {
