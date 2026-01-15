@@ -8,29 +8,96 @@ export const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Product Strategy",
+      title: "Product Marketing & Positioning",
       icon: Target,
-      skills: ["Roadmapping", "A/B Testing", "Project Management", "Prioritization"]
+      skills: [
+        "Product Positioning & Messaging",
+        "Value Proposition Development",
+        "Customer Segmentation",
+        "User Personas",
+        "Competitive & Market Research",
+        "Customer Insight Synthesis"
+      ]
     },
     {
-      title: "User Experience Design & Documentation",
-      icon: Figma,
-      skills: ["User Stories", "User Flows", "Wireframes", "Persona Development"]
+      title: "Go-To-Market & Launches",
+      icon: Lightbulb,
+      skills: [
+        "Go-To-Market Strategy",
+        "Feature Launch Planning",
+        "Launch Messaging & Enablement",
+        "Adoption & Activation Campaigns",
+        "Cross-Functional Launch Execution (Product, Design, Sales, Support)"
+      ]
     },
     {
-      title: "Market & User Research",
+      title: "Growth, Adoption & Retention",
+      icon: TrendingUp,
+      skills: [
+        "User Acquisition Strategy",
+        "Activation & Onboarding Optimization",
+        "Retention & Engagement Programs",
+        "Conversion Rate Optimization (CRO)",
+        "A/B Testing & Experimentation",
+        "Funnel Optimization"
+      ]
+    },
+    {
+      title: "Customer & Market Insight",
       icon: Search,
-      skills: ["Market Analysis", "Experiment Design", "Usability Testing", "Customer Insights"]
+      skills: [
+        "User Research & Interviews",
+        "Voice-of-Customer Analysis",
+        "Customer Journey Mapping",
+        "Behavior & Funnel Analysis",
+        "Feedback Loops & Iteration"
+      ]
     },
     {
-      title: "Analytics & Product Operations",
+      title: "Channels & Campaigns",
+      icon: Zap,
+      skills: [
+        "Email Marketing & Lifecycle Campaigns",
+        "Social Media Strategy",
+        "Content Marketing",
+        "Community-Led Growth",
+        "Event Marketing & Offline Activations",
+        "Customer Education Campaigns"
+      ]
+    },
+    {
+      title: "Analytics & Measurement",
       icon: BarChart3,
-      skills: ["Data Analysis", "Experiment Tracking", "Software Development & Management", "Metrics-Driven Decision Making"]
+      skills: [
+        "Product & Marketing Analytics",
+        "KPI & OKR Tracking",
+        "CAC, LTV & Conversion Metrics",
+        "Cohort & Performance Analysis",
+        "Experiment Reporting"
+      ]
     },
     {
-      title: "Collaboration & Teamwork",
+      title: "Communication & Enablement",
       icon: Users,
-      skills: ["Cross-functional Leadership", "Stakeholder Management", "Effective Communication", "Aligning Teams Around Product Goals"]
+      skills: [
+        "Product Messaging & Storytelling",
+        "Copywriting",
+        "Customer-Facing Content",
+        "Internal Enablement Materials",
+        "Stakeholder Communication",
+        "Reporting & Insights Sharing"
+      ]
+    },
+    {
+      title: "Tools",
+      icon: Figma,
+      skills: [
+        "Google Analytics",
+        "Product Analytics Tools",
+        "Email & CRM Tools",
+        "Social Media Analytics",
+        "Agile & Cross-Functional Collaboration"
+      ]
     }
   ];
 
@@ -74,9 +141,8 @@ export const Skills = () => {
             return (
               <div
                 key={category.title}
-                className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                }`}
+                className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                  }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center mb-4">
