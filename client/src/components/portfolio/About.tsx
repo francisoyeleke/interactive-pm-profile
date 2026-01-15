@@ -36,8 +36,8 @@ export const About = () => {
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <img 
-                  src={francisBg} 
+                <img
+                  src={francisBg}
                   alt="Francis Background"
                   className="w-full h-full object-cover object-top"
                 />
@@ -52,13 +52,17 @@ export const About = () => {
               <h3 className="text-2xl font-bold text-black mb-4">
                 Building Products for Humans
               </h3>
-              
+
               <p className="text-lg text-gray-800 leading-relaxed">
-                With my startup background, I bring a lean mindset to building products fast. My psychology background uniquely connects me to creating products that deeply understand and enhance user experiences.
+                I sit at the intersection of product, growth, and execution — translating user insights into clear messaging, go-to-market strategies, and campaigns that drive real adoption.
               </p>
 
               <p className="text-lg text-gray-800 leading-relaxed">
-                I believe in the power of data-driven decision making, cross-functional collaboration, and iterative improvement. From initial concept to market launch, I guide products through their entire lifecycle while maintaining a relentless focus on user value and business impact.
+                I’ve led feature launches, run growth experiments, managed social media and email campaigns, and executed offline activations across Lagos, contributing to measurable improvements in user acquisition, retention, and revenue.
+              </p>
+
+              <p className="text-lg text-gray-800 leading-relaxed">
+                I’m especially strong in early-stage and scaling environments where clarity, speed, and experimentation matter.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mt-8">

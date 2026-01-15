@@ -10,10 +10,10 @@ export const Testimonials = () => {
     {
       id: 1,
       name: "Adewale Azeez",
-      role: "Software Engineer", 
+      role: "Software Engineer",
       company: "",
       content: "Francis's strategic vision and execution capabilities are exceptional. He transformed our product roadmap and delivered results that exceeded all expectations. His ability to balance user needs with business objectives is remarkable.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b6d6b375?w=150&h=150&fit=crop&crop=face",
+      avatar: "",
       rating: 5
     },
     {
@@ -22,7 +22,7 @@ export const Testimonials = () => {
       role: "CEO",
       company: "Intrasoft",
       content: "Working with Francis was a game-changer for our logistics platform. His PRD for operations and platform building expertise helped us create a delivery system that exceeded our expectations. His understanding of complex operational workflows is outstanding.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      avatar: "",
       rating: 5
     },
     {
@@ -31,7 +31,7 @@ export const Testimonials = () => {
       role: "Software Developer",
       company: "",
       content: "Francis's collaborative approach and respect for design thinking made our partnership incredibly productive. He understands the importance of user experience and fights for quality at every step.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      avatar: "/ref/1760144939533~3.jpg",
       rating: 5
     }
   ];
@@ -80,7 +80,7 @@ export const Testimonials = () => {
 
         <div className="relative">
           <div className="overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
@@ -89,24 +89,30 @@ export const Testimonials = () => {
                   <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mx-auto max-w-4xl">
                     <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                       <div className="flex-shrink-0">
-                        <img
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          className="w-20 h-20 rounded-full object-cover shadow-lg"
-                        />
+                        {testimonial.avatar ? (
+                          <img
+                            src={testimonial.avatar}
+                            alt={testimonial.name}
+                            className="w-20 h-20 rounded-full object-cover shadow-lg"
+                          />
+                        ) : (
+                          <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-bold text-lg shadow-lg">
+                            {testimonial.name.split(" ").map((n) => n[0]).join("")}
+                          </div>
+                        )}
                       </div>
-                      
+
                       <div className="flex-1 text-center md:text-left">
                         <div className="flex justify-center md:justify-start mb-4">
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                           ))}
                         </div>
-                        
+
                         <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
                           "{testimonial.content}"
                         </p>
-                        
+
                         <div>
                           <h4 className="text-xl font-bold text-gray-900">{testimonial.name}</h4>
                           <p className="text-blue-600 font-medium">{testimonial.role}</p>
@@ -129,7 +135,7 @@ export const Testimonials = () => {
           >
             <ChevronLeft size={24} className="text-gray-700" />
           </button>
-          
+
           <button
             onClick={nextTestimonial}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 backdrop-blur-sm transition-all duration-300 hover:scale-110"
@@ -143,11 +149,10 @@ export const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-blue-600 scale-125' 
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                    ? 'bg-blue-600 scale-125'
                     : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                  }`}
               />
             ))}
           </div>

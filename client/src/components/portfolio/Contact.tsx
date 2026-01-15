@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Mail, Phone, Linkedin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -16,6 +15,7 @@ export const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { toast } = useToast();
+  const currentYear = new Date().getFullYear(); // Added to get the current year
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -108,7 +108,7 @@ export const Contact = () => {
           {/* Contact Information */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
             <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
-            
+
             <div className="space-y-6 mb-8">
               {contactInfo.map((info) => {
                 const Icon = info.icon;
@@ -135,7 +135,7 @@ export const Contact = () => {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  1+ years of product management experience
+                  3+ years of product management experience
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -157,7 +157,7 @@ export const Contact = () => {
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-              
+
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -178,7 +178,7 @@ export const Contact = () => {
                         </FormItem>
                       )}
                     />
-                    
+
                     <FormField
                       control={form.control}
                       name="email"
@@ -259,7 +259,7 @@ export const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-white/20">
           <p className="text-gray-300">
-            © 2024 Oyeleke Francis - Product Manager. All rights reserved.
+            © {currentYear} Oyeleke Francis - Product Manager. All rights reserved.
           </p>
         </div>
       </div>

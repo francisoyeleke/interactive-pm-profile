@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import zoid2 from "@/assets/images/projects/zoid-2.png";
@@ -16,9 +15,26 @@ export const Projects = () => {
       title: "Crystalveey Merch",
       description: "Crystalveey Merch is a portfolio brand that offers varieties of services, we are all about balancing worklife and enjoyment. Our utmost priority is to help busy people have fun and unwind.",
       image: crystalveey,
-      challenges: ["Low mobile conversion rates", "Complex checkout process", "Poor user retention"],
-      solutions: ["Streamlined checkout flow", "Personalized recommendations", "Progressive web app implementation"],
-      outcomes: ["40% increase in conversions", "60% faster checkout", "4.8/5 app store rating"],
+      whatIDid: [
+        "Led go-to-market strategy for ExploreVault, a group travel savings feature",
+        "Ran user interviews with 100+ travelers to refine messaging and positioning",
+        "Executed email campaigns, social content, and automated booking flows",
+        "Activated the brand at travel expos and tourism events across Lagos"
+      ],
+      impact: [
+        "30% increase in multi-user bookings",
+        "41% growth in social media community",
+        "25% increase in trip conversion rates",
+        "40% improvement in user retention"
+      ],
+      skillsUsed: [
+        "GTM Strategy",
+        "Growth Experiments",
+        "Email Marketing",
+        "Social Media",
+        "User Research",
+        "Funnel Optimization"
+      ],
       tech: ["Next.js", "Node.js", "MongoDB", "Paystack"],
       link: "https://www.crystalveey.com/",
       github: "#"
@@ -28,23 +44,30 @@ export const Projects = () => {
       title: "MBAG MFBank",
       description: "MBAG Microfinance Bank offers a fast track to financial independence through a range of services including micro savings, micro loans, and school-targeted loans. With a user-friendly banking app, managing money, making payments, and settling bills becomes effortless.",
       image: mbag,
-      challenges: ["Complex data visualization", "Real-time updates", "Multi-tenant architecture"],
-      solutions: ["Custom chart library", "WebSocket integration", "Microservices architecture"],
-      outcomes: ["500+ active businesses", "$2M ARR in first year", "99.9% uptime"],
+      whatIDid: [
+        "Led marketing and education campaigns to drive MQ adoption",
+        "Created customer-facing guides, FAQs, tutorials, and social media content",
+        "Participated in merchant activation sessions and banking industry events",
+        "Executed targeted email campaigns including feature tutorials and transaction updates",
+        "Conducted user interviews and funnel analysis to identify messaging gaps",
+        "Collaborated with customer support to reduce recurring issues"
+      ],
+      impact: [
+        "Contributed to 40% improvement in perceived transaction speed",
+        "28% increase in successful transaction completion",
+        "20% reduction in failed transactions",
+        "25% reduction in escalated support tickets"
+      ],
+      skillsUsed: [
+        "Product Marketing",
+        "Customer Education",
+        "Funnel Analysis",
+        "Email Campaigns",
+        "Fintech Growth",
+        "Stakeholder Collaboration"
+      ],
       tech: ["React", "D3.js", "Python", "PostgreSQL"],
       link: "https://mbagmfbank.com/",
-      github: "#"
-    },
-    {
-      id: 3,
-      title: "Zoid",
-      description: "Zoid is a secure lifestyle management platform that empowers you to seamlessly control your home and community. With features like access management, bill payments, and instant updates, Zoid simplifies everyday living through smart, convenient technology – bringing peace of mind and effortless control to your fingertips.",
-      image: zoid2,
-      challenges: ["HIPAA compliance", "Complex scheduling logic", "Multiple user types"],
-      solutions: ["End-to-end encryption", "Smart scheduling algorithm", "Role-based access control"],
-      outcomes: ["10,000+ appointments booked", "95% patient satisfaction", "50% reduction in no-shows"],
-      tech: ["Vue.js", "Express.js", "MySQL", "WebRTC"],
-      link: "#",
       github: "#"
     },
     {
@@ -52,9 +75,27 @@ export const Projects = () => {
       title: "Dietboon",
       description: "Dietboon makes healthy living easy and affordable for busy individuals. From tailored meal plans and daily health tips to grocery deliveries and nutritious take-out options, we ensure you stay energized and on track with your goals. Enjoy delicious, balanced meals that fit your lifestyle – anytime, anywhere.",
       image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop",
-      challenges: ["Meal personalization complexity", "Delivery logistics", "Nutritional accuracy"],
-      solutions: ["AI-powered meal recommendations", "Smart delivery routing", "Certified nutritionist partnerships"],
-      outcomes: ["85% user retention rate", "30% improvement in health metrics", "4.7/5 user satisfaction"],
+      whatIDid: [
+        "Worked on product positioning and messaging to clearly communicate Dietboon’s value around healthy, practical eating",
+        "Supported go-to-market planning by aligning product benefits with real customer pain points",
+        "Developed educational content ideas that balanced wellness, simplicity, and credibility",
+        "Contributed to campaign concepts focused on awareness, trust-building, and repeat engagement",
+        "Provided growth insights on how to use community conversations and storytelling to drive adoption"
+      ],
+      impact: [
+        "Improved clarity of product messaging and value proposition",
+        "Strengthened brand trust through simplified, education-led communication",
+        "Supported early user engagement and awareness for a health-focused product",
+        "Helped align product storytelling with user needs and lifestyle realities"
+      ],
+      skillsUsed: [
+        "Product Positioning",
+        "Health & Lifestyle Marketing",
+        "Content Strategy",
+        "Go-to-Market Support",
+        "Customer Education",
+        "Growth Thinking"
+      ],
       tech: ["React", "Python", "TensorFlow", "Google Maps API"],
       link: "https://www.dietboon.com/",
       github: "#"
@@ -64,9 +105,30 @@ export const Projects = () => {
       title: "Wholesquare",
       description: "Wholesquare is a social network designed to connect people through shared interests and also allows you to network and meet with your squaremates through community activities & events. Wholesquare is basically a platform that connects people with similar interests.",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-      challenges: ["User engagement", "Event coordination", "Interest matching algorithms"],
-      solutions: ["Smart interest-based matching", "Integrated event planning tools", "Gamified community features"],
-      outcomes: ["50,000+ active users", "75% event attendance rate", "90% positive community feedback"],
+      whatIDid: [
+        "Built early traction through grassroots marketing and targeted youth outreach",
+        "Organized and led 5+ community events including meetups, creator sessions, and local experiences",
+        "Activated the brand at 10+ festivals, tech events, and campus gatherings",
+        "Designed onboarding flows and email nurture campaigns to drive early adoption",
+        "Launched a digital experiences feature tailored to local events and activities",
+        "Ran A/B tests on messaging, landing pages, and emails to improve conversion",
+        "Partnered with creators and community leaders on growth and monetization ideas"
+      ],
+      impact: [
+        "Grew community from 0 to 200+ users in 6 months",
+        "35% increase in platform adoption despite web-only access",
+        "70% community growth after launching digital experiences",
+        "Improved retention through structured onboarding and education flows"
+      ],
+      skillsUsed: [
+        "Community Growth",
+        "Event Marketing",
+        "User Onboarding",
+        "Email Marketing",
+        "Experimentation",
+        "Partnerships",
+        "Analytics"
+      ],
       tech: ["Next.js", "Node.js", "Redis", "Socket.io"],
       link: "https://www.wholesquare.org/",
       github: "#"
@@ -103,15 +165,14 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:scale-105 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-              }`}
+              className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                }`}
               style={{ transitionDelay: `${index * 200}ms` }}
               onClick={() => setSelectedProject(project.id)}
             >
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -125,7 +186,7 @@ export const Projects = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {project.title}
@@ -133,27 +194,11 @@ export const Projects = () => {
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.tech.length > 3 && (
-                    <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
-                      +{project.tech.length - 3} more
-                    </span>
-                  )}
-                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Project Modal */}
         {selectedProject && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -169,64 +214,53 @@ export const Projects = () => {
                         ×
                       </button>
                     </div>
-                    
-                    <img 
-                      src={project.image} 
+
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-64 object-cover rounded-xl mb-6"
                     />
-                    
+
                     <p className="text-lg text-gray-700 mb-8">{project.description}</p>
-                    
+
                     <div className="grid md:grid-cols-3 gap-8 mb-8">
                       <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Challenges</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">What I Did</h4>
                         <ul className="space-y-2">
-                          {project.challenges.map((challenge, i) => (
+                          {project.whatIDid.map((item, i) => (
                             <li key={i} className="flex items-start">
                               <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-gray-700">{challenge}</span>
+                              <span className="text-gray-700">{item}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Solutions</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Impact</h4>
                         <ul className="space-y-2">
-                          {project.solutions.map((solution, i) => (
+                          {project.impact.map((item, i) => (
                             <li key={i} className="flex items-start">
                               <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-gray-700">{solution}</span>
+                              <span className="text-gray-700">{item}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Outcomes</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Skills Used</h4>
                         <ul className="space-y-2">
-                          {project.outcomes.map((outcome, i) => (
+                          {project.skillsUsed.map((skill, i) => (
                             <li key={i} className="flex items-start">
                               <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-gray-700">{outcome}</span>
+                              <span className="text-gray-700">{skill}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
-                    
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    
+
                     <div className="flex space-x-4">
                       <a
                         href={project.link}

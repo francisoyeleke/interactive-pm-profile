@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { ChevronDown, Sparkles, Target, Users } from "lucide-react";
 
@@ -40,7 +39,7 @@ export const Hero = () => {
             <div className="inline-block px-4 py-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full mb-6">
               <span className="text-yellow-400 text-sm font-medium">Product Manager</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent whitespace-nowrap">
                 Oyeleke Francis
@@ -48,27 +47,27 @@ export const Hero = () => {
             </h1>
           </div>
         </div>
-        
+
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed font-light">
-            As a product manager, I serve as the bridge between building the right product and building it exceptionally well, aligning solutions with user needs and business objectives while fostering collaboration across teams to transform ideas into impactful outcomes.
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed font-light">
+            I’m a Product Marketing Manager with over 3 years of experience growing consumer-facing tech products across fintech, travel, lifestyle, and mobility in Nigeria. Skilled in product strategy, go-to-market planning, user acquisition, and cross-functional team leadership. Passionate about leveraging data-driven insights to deliver exceptional user experiences and drive business growth.
           </p>
         </div>
 
         {/* CTA Buttons */}
         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button 
-              onClick={scrollToAbout}
+            <a
+              href="/francis_oyeleke_cv.pdf"
+              download
               className="group bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-yellow-400/25"
             >
               <span className="flex items-center gap-2">
-                View My Work
-                <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+                Download CV
               </span>
-            </button>
-            
-            <button 
+            </a>
+
+            <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-4 border-2 border-yellow-400/30 text-yellow-400 hover:bg-yellow-400/10 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
@@ -84,8 +83,8 @@ export const Hero = () => {
           <div className="w-6 h-10 border-2 border-yellow-400/30 rounded-full mb-2 flex justify-center">
             <div className="w-1 h-3 bg-yellow-400 rounded-full mt-2 animate-pulse"></div>
           </div>
-          <ChevronDown 
-            size={24} 
+          <ChevronDown
+            size={24}
             className="text-yellow-400/60 cursor-pointer hover:text-yellow-400 transition-colors duration-300"
             onClick={scrollToAbout}
           />
