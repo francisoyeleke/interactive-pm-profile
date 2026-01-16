@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Target, Users, BarChart3, Lightbulb, Zap, Figma, TrendingUp, Search } from "lucide-react";
 
 export const Skills = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const sectionRef = useRef<HTMLElement>(null);
 
   const skillCategories = [
