@@ -3,7 +3,6 @@ import { Target, Users, BarChart3, Lightbulb, Zap, Figma, TrendingUp, Search } f
 
 export const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [animatedBars, setAnimatedBars] = useState<boolean[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
   const skillCategories = [
@@ -110,10 +109,6 @@ export const Skills = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Animate progress bars with delay
-          setTimeout(() => {
-            setAnimatedBars(new Array(skillCategories.length).fill(true));
-          }, 500);
         }
       },
       { threshold: 0.3 }
@@ -124,7 +119,7 @@ export const Skills = () => {
     }
 
     return () => observer.disconnect();
-  }, [skillCategories.length]);
+  }, []);
 
   return (
     <section id="skills" ref={sectionRef} className="py-20 bg-gray-50">
@@ -135,14 +130,13 @@ export const Skills = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
               <div
                 key={category.title}
-                className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                  }`}
+                className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center mb-4">
