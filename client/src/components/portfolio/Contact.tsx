@@ -93,13 +93,13 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+    <section id="contact" ref={sectionRef} className="py-20 text-white" style={{ background: 'linear-gradient(135deg, var(--deep-violet) 0%, var(--violet) 50%, var(--lavender-indigo) 100%)' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 luxury-font">
             Let's Work Together
           </h2>
-          <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+          <p className="text-xl text-center mb-16 max-w-3xl mx-auto modern-font" style={{ color: 'var(--magnolia)' }}>
             Ready to transform your product vision into reality? Let's discuss how we can create something amazing together.
           </p>
         </div>
